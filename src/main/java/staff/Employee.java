@@ -24,7 +24,9 @@ public abstract class Employee {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name != null){
+            this.name = name;
+        }
     }
 
     public void setNiN(int niN) {

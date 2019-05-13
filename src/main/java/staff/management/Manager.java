@@ -26,7 +26,6 @@ public class Manager extends Employee {
         return -1;
     }
 
-    @Override
     public double payBonus(int number) {
 
             return number;

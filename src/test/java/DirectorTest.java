@@ -8,19 +8,26 @@ public class DirectorTest {
     private Director director;
 
     @Before
-    public void before(){
+    public void before() {
         director = new Director("Lidia", 23456, 450000, "NewProducts", 10000000);
     }
 
     @Test
-    public void canGetBudget(){
+    public void canGetBudget() {
         assertEquals(10000000.0, director.getBudget());
     }
 
     @Test
-    public void canSetBudget(){
-       double budget = 30000000;
+    public void canSetBudget() {
+        double budget = 30000000;
         director.setBudget(budget);
-        assertEquals(30000000.0,director.getBudget());
+        assertEquals(30000000.0, director.getBudget());
+    }
+
+    @Test
+    public void canPayBonus() {
+        int number = 2;
+        assertEquals(2.04, director.payBonus(number));
+
     }
 }
